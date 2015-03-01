@@ -49,6 +49,3 @@ node default {
 ```sh
 sudo puppet agent -v --logdest=console --runinterval=2s --server puppet-master
 ```
-
-
-by Jing.
