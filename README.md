@@ -5,12 +5,12 @@ A test lab for deployment the puppetmaster and puppet agent system from vagrant.
 by Jing.
 
 ### Requirement
-1. VirtualBox
-2. Vagrant
+- VirtualBox
+- Vagrant
 ```sh
 	vagrant box add ubuntu/trusty64
 ```
-3. puppet
+- puppet
 ```sh
 	sudo apt-get install puppet-common 
 	puppet module install lex-dnsmasq // dns server  
