@@ -7,9 +7,14 @@ by Jing.
 ### Requirement
 1. VirtualBox
 2. Vagrant
+```sh
 	vagrant box add ubuntu/trusty64
+```
 3. puppet
-	- puppet module install lex-dnsmasq // for dns server
+```sh
+	sudo apt-get install puppet-common 
+	puppet module install lex-dnsmasq // dns server  
+```
 
 ### Usage:
 #### Initial the Infrastructure
