@@ -1,4 +1,5 @@
 == start your puppet lab ==
 ```` bash
-. ./bash/up.sh
+cd ./bash
+. ./up.sh
 ````
