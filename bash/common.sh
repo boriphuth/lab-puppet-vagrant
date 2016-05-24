@@ -221,3 +221,9 @@ function fun_puppet_enable(){
     sudo sed -i "s#^.*\bSTART\b.*\$#START=yes#g" /etc/default/puppet
 
 }
+
+# https://tickets.puppetlabs.com/browse/PUP-2566
+# Debian puppet packages set templatedir which triggers deprecation warning
+function fun_puppet_fix_issue_PUP2566(){
+    sudo sed -i '/templatedir/s/^/#/g' /etc/puppet/puppet.conf
+}
