@@ -11,4 +11,4 @@ private_key=node1/.vagrant/machines/default/virtualbox/private_key
 ssh -o StrictHostKeyChecking=no -i $private_key vagrant@$ip "$(< common.sh);  fun_puppet_enable"
 ssh -o StrictHostKeyChecking=no -i $private_key vagrant@$ip service puppet start
 ssh -o StrictHostKeyChecking=no -i $private_key vagrant@$ip sudo puppet agent --test --server master.smb.com
-sh -o StrictHostKeyChecking=no -i $private_key vagrant@$ipa sudo puppet agent --enable
+ssh -o StrictHostKeyChecking=no -i $private_key vagrant@$ipa sudo puppet agent --enable
