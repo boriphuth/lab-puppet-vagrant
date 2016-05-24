@@ -225,5 +225,6 @@ function fun_puppet_enable(){
 # https://tickets.puppetlabs.com/browse/PUP-2566
 # Debian puppet packages set templatedir which triggers deprecation warning
 function fun_puppet_fix_issue_PUP2566(){
+    echo "Fix issue: Debian puppet packages set templatedir which triggers deprecation warning."
     sudo sed -i '/templatedir/s/^/#/g' /etc/puppet/puppet.conf
 }
