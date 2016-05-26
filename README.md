@@ -1,5 +1,6 @@
 # Puppet Lab 
-start your puppet lab ==
+start your puppet lab
+
 ## puppet server / puppet agent lab
 ```` bash
 cd ./server-agent-lab
