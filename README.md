@@ -1,5 +1,10 @@
 # Puppet Lab 
-start your puppet lab
+
+## Requirement
+- VirtualBox: https://www.virtualbox.org/
+- Vagrant: https://www.vagrantup.com/
+
+Start your puppet lab
 
 ## puppet server / puppet agent lab
 ```` bash
