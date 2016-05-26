@@ -8,6 +8,6 @@ cd ./server-agent-lab
 ````
 ## puppet master / puppet agent lab
 ```` bash
-cd ./bash
+cd ./master-agent-lab
 . ./up.sh
 ````
