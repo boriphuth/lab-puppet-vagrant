@@ -2,6 +2,20 @@
 
 . ./hosts_ip_map.sh
 
+function fun_remove_old_identify(){
+    # Remove old HOST IDENTIFICATION
+    local FILE="$HOME/.ssh/known_hosts"
+    for node in "${!HostIP[@]}"
+    do
+        if [ -f $FILE ]
+        then
+          ssh-keygen -f $FILE -R ${HostIP["$node"]}
+        fi
+    done
+}
+
+fun_remove_old_identify
+
 node=master.smb.com
 ip=${HostIP["$node"]}
 private_key=master/.vagrant/machines/default/virtualbox/private_key

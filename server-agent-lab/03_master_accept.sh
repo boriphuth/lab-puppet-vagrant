@@ -9,6 +9,7 @@ ip=${HostIP["$node"]}
 private_key=master/.vagrant/machines/default/virtualbox/private_key
 
 #Sign node1
+# sudo /opt/puppetlabs/bin/puppet cert --sign node1.smb.com 
 ssh -o StrictHostKeyChecking=no -i $private_key vagrant@$ip \
 "sudo /opt/puppetlabs/bin/puppet cert list;
- sudo /opt/puppetlabs/bin/puppet cert --sign node1.smb.com"
+ sudo /opt/puppetlabs/bin/puppet cert sign --all"

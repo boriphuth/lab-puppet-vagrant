@@ -15,9 +15,10 @@ ssh -o StrictHostKeyChecking=no -i $private_key vagrant@$master_ip sudo cp test_
 node=node1.smb.com
 ip=${HostIP["$node"]}
 private_key=node1/.vagrant/machines/default/virtualbox/private_key
+
+# sudo /opt/puppetlabs/bin/puppet agent --enable;
 ssh -o StrictHostKeyChecking=no -i $private_key vagrant@$ip \
-"sudo /opt/puppetlabs/bin/puppet agent --enable;
- sudo /opt/puppetlabs/bin/puppet agent --test --server master.smb.com"
+ "sudo /opt/puppetlabs/bin/puppet agent --test --server master.smb.com"
 
 # verify
 ssh -o StrictHostKeyChecking=no -i $private_key vagrant@$ip cat /tmp/temp1.txt

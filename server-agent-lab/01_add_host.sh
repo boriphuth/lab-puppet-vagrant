@@ -14,18 +14,5 @@ function fun_add_hosts(){
     done
 }
 
-function fun_remove_old_identify(){
-    # Remove old HOST IDENTIFICATION
-    local FILE="$HOME/.ssh/known_hosts"
-    for node in "${!HostIP[@]}"
-    do
-        if [ -f $FILE ] 
-        then
-          ssh-keygen -f $FILE -R ${HostIP["$node"]} 
-        fi
-    done
-}
-
-fun_remove_old_identify
 fun_add_hosts 192.168.33.10 vagrant master/.vagrant/machines/default/virtualbox/private_key
 fun_add_hosts 192.168.33.11 vagrant node1/.vagrant/machines/default/virtualbox/private_key
